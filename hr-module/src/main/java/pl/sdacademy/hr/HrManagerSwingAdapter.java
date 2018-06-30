@@ -14,4 +14,9 @@ public class HrManagerSwingAdapter {
 		Employee newEmployee = hrManager.create(firstName, lastName, dateOfBirth);
 		tableModel.addRow(new Object[]{newEmployee.getFirstName(), newEmployee.getLastName(), newEmployee.getDateOfBirth()});
 	}
+
+	public void sortByLastName(DefaultTableModel tableModel) {
+
+
+	}
 }
