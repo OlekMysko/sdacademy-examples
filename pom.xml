@@ -35,6 +35,7 @@
 		<module>hr-module</module>
 		<module>Tadeusz</module>
 		<module>CarAplication</module>
+		<module>MyCarApp</module>
 	</modules>
 	<packaging>pom</packaging>
 	<name>sdacademy-examples</name>
@@ -103,6 +104,11 @@
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
 			<version>${guava.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.javamoney</groupId>
+			<artifactId>moneta</artifactId>
+			<version>1.1</version>
 		</dependency>
 		<dependency>
 			<groupId>com.google.guava</groupId>
