@@ -11,12 +11,12 @@ class Race {
 
 
 
-	void race(int lapsNumber, Car car, GasStation gasStation, Vulcanizer wulkanizator, CarMyjka myjka) {
+	void race(int lapsNumber, Car car,Pitstop pitstop) {
 
 		for (int i=0;i<lapsNumber;i++){
 			threshold(car);
 			if (check(car,pitstop)){
-				pitstop.pitstop(car,gasStation,wulkanizator,myjka);
+				pitstop.pitstop(car);
 			};
 		}
 	}

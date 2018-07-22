@@ -9,6 +9,8 @@ class GasStationTest {
 	GasStation shell;
 	CarMyjka myjka;
 	Vulcanizer wulkanizator;
+	Pitstop pitstop;
+	Race race;
 	@BeforeEach
 	void setUp() {
 	tadeuszCar = new Car(65,FuelType.PB);
@@ -93,12 +95,13 @@ class GasStationTest {
 	void test05() {
 
 		//given
-		Race race = new Race();
+		race = new Race();
+		pitstop = new Pitstop(shell,wulkanizator,myjka);
 		int lapsNumber = 100;
 		//when
-		race.race(lapsNumber,tadeuszCar,shell,wulkanizator,myjka);
+		race.race(lapsNumber,tadeuszCar,pitstop);
 		//then
-		assertThat(race.check(tadeuszCar)).isTrue();
+		assertThat(race.check(tadeuszCar,pitstop)).isTrue();
 
 	}
 	@DisplayName("Should let to ride 100 laps race and if needed get pitstop")
@@ -106,14 +109,13 @@ class GasStationTest {
 	void test06() {
 
 		//given
-		Pitstop pitstop = new Pitstop(shell,wulkanizator,myjka);
-		Race race = new Race();
+		race = new Race();
+		pitstop = new Pitstop(shell,wulkanizator,myjka);
 		int lapsNumber = 100;
 		//when
-		race.race(lapsNumber,tadeuszCar);
+		race.race(lapsNumber,tadeuszCar,pitstop);
 		//then
-		assertThat(race.check(tadeuszCar)).isTrue();
+
 
 	}
-
-}
+	}

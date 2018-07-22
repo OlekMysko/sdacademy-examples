@@ -20,12 +20,12 @@ class GasStation {
 		double payment = fillValue*price4Liter;
 
 		if ((car.getCurrentFuelLevel()+fillValue)>car.getMaxFuelLevel())
-			{
+		{
 			car.setCurrentFuelLevel(car.getMaxFuelLevel());
-			}
+		}
 		else	{
 			car.setCurrentFuelLevel(car.getCurrentFuelLevel()+fillValue);
-			}
+		}
 		return payment;
 	}
 
