@@ -19,6 +19,12 @@ public class Car {
 	private final double fuelConsumptionPerLap;
 
 	@Getter
+	private final double wheelUsagePerLap;
+
+	@Getter
+	private final double dirtyRisePerLap;
+
+	@Getter
 	@Setter
 	private double currentCarDirty;
 
@@ -28,6 +34,12 @@ public class Car {
 
 	@Getter
 	private double minFuelValueForPitstop = 5;
+
+	@Getter
+	private double maxCarDirty = 95;
+
+	@Getter
+	private double maxWheelUsage = 5;
 
 
 }

@@ -16,7 +16,6 @@ public class PetrolStation {
 		return valueToPay;
 	}
 
-
 	double fill(Car car, int fillValue) {
 		double valueToPay = fillValue * fuelPrice.get(car.getFuelType());
 		if (car.getFullCapacity() < car.getCurrentCapacity() + fillValue) {

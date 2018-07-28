@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class PetrolStationTest {
 
-	Car car = new Car(60, FuelType.PB, 10);
+	Car car = new Car(60, FuelType.PB, 10,1,8);
 	PetrolStation shell = new PetrolStation();
 	Map<FuelType, Double> fuelPrice = new HashMap<>();
 	Race race = new Race();
